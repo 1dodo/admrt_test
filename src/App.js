@@ -15,6 +15,9 @@ import { auth } from "./api/firebase";
 import UserPage from "./Layout/UserPage/UserPage";
 import SlideShow from './Layout/SlideShow'
 import './Layout/style.css'
+import Continue from "./Layout/AuthPage/Continue";
+import CreateAnAcc from "./Layout/AuthPage/CreateAnAcc";
+import ForgotPassword from "./Layout/AuthPage/ForgotPassword";
 
 function App() {
   // const [user, setUser] = useState(true);
@@ -37,6 +40,9 @@ function App() {
       <Routes>
         <Route path='/' element={user ? <Home /> : <Login />} />
         <Route path='/register' element={user ? <Home /> : <Register />} />
+        <Route path='/continue' element={user ? <Home /> : <Continue />} />
+        <Route path='/registasion' element={user ? <Home /> : <CreateAnAcc />} />
+        <Route path='/forgotPassword' element={user ? <Home /> : <ForgotPassword />} />
         <Route path='/home' element={user ? <Home /> : <Login />} />
         <Route path='/home/user/:id' element={user ? <UserPage /> : <Login />} />
         <Route
